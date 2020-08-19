@@ -1,0 +1,187 @@
+
+* {
+  font-family: 'PT Mono', monospace;
+  font-size: 62%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* GRID SETTINGS */
+.game {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 8fr 2fr;
+  grid-template-rows: auto;
+
+}
+
+.masthead {
+  margin: 0;
+  background-color: #424242;
+  color: white;
+  grid-column: 1/3;
+  grid-row: 1/2;
+
+}
+
+.main-content {
+  padding: 5rem;
+  padding-right: 2rem;
+  background-color: white;
+  grid-column: 1/2;
+  grid-row: 2/4
+
+}
+
+.sidebar {
+  text-align: center;
+  padding: 5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+/* FONT SIZES */
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  padding-left: 5rem;
+  font-size: 12.4rem;
+  color:inherit;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+h1 > span {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+
+h3 {
+  margin-bottom: 4rem;
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+.sidebar h2 {
+  margin-bottom: 2.5rem;
+}
+
+
+/* p .question-text {
+  font-size: 3.2rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+} */
+
+/* BUTTON STYLES */
+
+button {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  width: 20rem;
+  text-align: center;
+  border: 0.4rem solid black;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+}
+
+button::before,button::after {
+  content: "";
+  position: absolute;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: white;
+  transform:skewX(50deg);
+  transition: .4s;
+}
+
+button::before {
+  top: -0.4rem;
+  left: 10%;
+}
+
+button::after {
+  bottom: -0.4rem;
+  right: 10%;
+}
+
+button:hover::before {
+  left: 80%;
+}
+
+button:hover::after {
+  right: 80%;
+}
+
+/* HIDDEN ELEMENTS */
+
+.hidden {
+  visibility: hidden;
+}
+
+/* SCOREBOARD  STYLING */
+
+[contentEditable="true"]{
+  border: 2px grey dashed;
+}
+
+[contentEditable="false"]{
+  border: 2px black solid;
+}
+
+.scoreboard-table {
+  font-size: 8rem;
+}
+.hover-pointer{
+    font-size: 4rem;
+    cursor: pointer;
+ }
+ .players {
+  width: 50%;
+  display: inline;
+}
+
+.moderator {
+  width: 50%;
+  display: inline;
+}
+
+
+#countdown-timer {
+  font-size: 2.8rem;
+}
+
+.scoreboard-table {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  margin: auto;
+}
+
+
+#players, #moderator {
+  padding: 2.5rem;
+}

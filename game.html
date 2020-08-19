@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4GK - Game 7</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="game.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js" integrity="sha256-Fh801SO9gqegfUdkDxyzXzIUPWzO/Vatqj8uN+5xcL4=" crossorigin="anonymous"></script>
+    <script src="csvReader.js"></script>
+    <script src="game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" integrity="sha256-G7A4JrJjJlFqP0yamznwPjAApIKPkadeHfyIwiaa9e0=" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="game">
+    <header class="masthead">
+      <h1 id="logo"><a href="/"><img src="4GK Logo.jpg" alt="4GK logo" style="width:100px;height:100px;"></a>4GK</h1>
+    </header>
+    <main id="content" class="main-content">
+        <h3 class="question-number">Placeholder</h3>
+        <h2 class="question-text">Текст вопроса</h2>
+        <button type="button" id="show-answer-button">Узнать ответ</button>
+        <section class="answer hidden">
+          <h2 class="answer-text">Текст ответа</h2>
+          <button type="button" class="next-question">Следующий вопрос</button>
+        </section>
+    </main>
+
+    <aside class="sidebar">
+      <h2>Счет</h2>
+      <table class="scoreboard-table">
+        <tr class="teams-tag">
+          <td id="players">Знатоки</td>
+          <td id="moderator">Ведущий</td>
+        </tr>
+        <tr class="hover-pointer">
+          <td id="players-score">0</td>
+          <td id="moderator-score">0</td>
+        </tr>
+      </table>
+
+      <button type="button" id="toggleEdit-button">Изменить Счет</button><br>
+      <button type="button" id="countdown-button">Время</button>
+      <p id="countdown-timer">2 минуты</p>
+
+    </aside>
+  </body>
+</html>
